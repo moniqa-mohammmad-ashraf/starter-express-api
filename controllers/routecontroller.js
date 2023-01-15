@@ -15,6 +15,10 @@ routes.post('/addUserExercise', async (req, res) => {
     const result = await addUserExercise.save();
     res.send({ message: 'data added' });
 });
+routes.get('/', async (req, res) => {
+    res.send('Hello');
+});
+
 // // Retrieve all Excersice
 routes.get('/getuserexercise', async (req, res) => {
     var activities = await UserExerciseTracker.find();
